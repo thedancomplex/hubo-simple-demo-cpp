@@ -5,8 +5,12 @@ CXXFLAGS := -I./include -g
 CXX := g++
 
 BINARIES := hubo-simple-demo-cpp
+all : $(BINARIES)
+
 
 LIBS := -lach -lrt -lm -lc
+
+
 hubo-simple-demo-cpp: src/hubo-simple-demo-cpp.o
 	$(CXX)  -o $@ $< $(LIBS)
 
